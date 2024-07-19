@@ -3,7 +3,7 @@
 import React, { useState, MouseEvent } from 'react';
 import Form from './comnpoment/form';
 import logo from './logo.svg';
-
+import ListPost from './comnpoment/listPort';
 import FormLG from './LoginForm/formLG';
 import './App.css';
 
@@ -58,6 +58,7 @@ function App() {
     
     <div className='App'>
       <FormLG></FormLG>
+      <ListPost/>
       {/* <Form firstname='AAA' lastname='BBB' /> */}
       {/*<button onClick={addProduct}>Add Product</button>
       <ul>
