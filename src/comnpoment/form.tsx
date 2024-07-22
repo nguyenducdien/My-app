@@ -55,4 +55,4 @@ const Form = ({
   );
 };
 
-export default memo(Form); // no props,
+export default Form; // no props,

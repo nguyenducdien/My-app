@@ -7,6 +7,7 @@ import ListPost from './comnpoment/listPort';
 import FormLG from './LoginForm/formLG';
 import './App.css';
 import { Provider, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 // props
 // state
@@ -55,13 +56,16 @@ function App() {
       return prevProducts;
     });
   };*/
+
+
+ 
   return (
     
     <div className='App'>
       
           
           
-     <FormLG></FormLG>
+     {/*<FormLG></FormLG>*/}
       <ListPost/>
       {/*<Form firstname='AAA' lastname='BBB' /> */}
       {/*<button onClick={addProduct}>Add Product</button>
