@@ -2,6 +2,7 @@
 import { features } from 'process';
 import { useState, useEffect } from 'react';
 import { set } from 'react-hook-form';
+import "./listPost.css"
 
 
 interface Post {
@@ -46,7 +47,7 @@ const ListPost = () => {
 
   return (
     <>
-      <h3>List posts</h3>
+      <h1 className='listPosts'>List posts</h1>
       {posts.map((item:Post) => (
         <div key={item.id}>
           <b>{item.title}</b>

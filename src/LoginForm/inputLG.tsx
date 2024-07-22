@@ -16,4 +16,4 @@ type InputProps = {
     );
   };
   
-  export default InputText; 
+  export default InputText; // 
