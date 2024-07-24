@@ -1,10 +1,15 @@
-import { AuthAction } from "./action"
-const initalSate ={
-    isLoggednIn : false,
-    // trong đây để khởi tạo đối tượng cần làm cái gì bên trong ??
+import { CHANGE_COLOR,buttonAction } from "./action"
+interface ButtonState {
+   [key:string]: string,
+  };
+const initialState  :ButtonState={
+    button1: 'blue',
+    button2: 'blue',
+    button3: 'blue',
 }
 
-const authReducer = (state =initalSate, action :{type: string , data :any} )=>{
+
+const buttonReducer = (state =initialState, action :buttonAction )=>{
     /*
     action :
     {
@@ -14,17 +19,17 @@ const authReducer = (state =initalSate, action :{type: string , data :any} )=>{
     
     */ 
     switch(action.type){
-        case AuthAction.LOGIN:
-        console.log(action)
+        case CHANGE_COLOR:
+        
         return {
             ... state,
-            isLoggednIn :true,
+            [action.payload.buttonId]:action.payload.color
         }
         default: 
-            break;
+            return state;
     }
-    return state 
+   
 }
 
 
-export default authReducer
+export default buttonReducer;

@@ -1,12 +1,13 @@
 import { combineReducers } from "redux";
-import authReducer from "./authReducer";
+import buttonReducer from "./authReducer";
 import { configureStore } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
-    reducer : authReducer,
+    reducer : buttonReducer,
 })
 const store =configureStore({
-    reducer : rootReducer,
+    reducer: buttonReducer,
+    
 })
 export default store;
 export type RootState = ReturnType<typeof store.getState>

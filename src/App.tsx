@@ -8,6 +8,8 @@ import FormLG from './LoginForm/formLG';
 import './App.css';
 import { Provider, useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import FormH from './comnpoment/Form_Hover/formH';
+//import Button from './comnpoment/store/buttton';
 
 // props
 // state
@@ -64,7 +66,12 @@ function App() {
     <div className='App'>
       
           
-          
+        <FormH></FormH>
+        <div>
+          <button id="button1"></button>
+          <button id="button2"></button>
+          <button id="button3"></button>
+        </div>
      {/*<FormLG></FormLG>*/}
       <ListPost/>
       {/*<Form firstname='AAA' lastname='BBB' /> */}

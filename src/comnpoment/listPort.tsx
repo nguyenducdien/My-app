@@ -1,8 +1,9 @@
 /** @format */
-import { features } from 'process';
+//import { features } from 'process';
 import { useState, useEffect } from 'react';
-import { set } from 'react-hook-form';
+//import { set } from 'react-hook-form';
 import "./listPost.css"
+import { useSelector, UseSelector } from 'react-redux';
 
 
 interface Post {
@@ -20,7 +21,8 @@ interface User {
 const ListPost = () => {
 
   const [posts, setPosts] = useState([]);
-  
+  const state= useSelector(state=> state)
+  console.log(state);
 
   useEffect(() => {
     async function fetchData() {
